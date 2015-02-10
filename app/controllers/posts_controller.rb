@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  # adds for devise
+  before_action :authenticate_user!, except: [:index, :show]
 
 	# index show new edit create update destroy
 	
